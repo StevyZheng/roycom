@@ -25,7 +25,7 @@ SECRET_KEY = '7r%ebp7s$2s+339!b=!&vwfo*kj1slc+x-g0f=!z3p+(e_u&t1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'manager',
 ]
 
@@ -56,7 +57,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [os.path.join(BASE_DIR, 'templates')]
-	    ,
+        ,
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -126,3 +127,4 @@ TEMPLATE_LOADERS = (
     'django_jinja.loaders.FileSystemLoader',
 
 )
+
